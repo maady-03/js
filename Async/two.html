@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manas kesa h</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayManas = function(){
+        console.log("Manas");
+    }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML="best Js learning platform"
+    }
+
+     setTimeout(sayManas,2000);
+     const changeMe = setTimeout(changeText,2000);
+     document.querySelector('#stop').addEventListener('click',
+        function(){
+            clearTimeout(changeMe)
+            console.log("STOPPED");
+        }
+     )
+
+</script>
+</html>
